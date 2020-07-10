@@ -9,5 +9,3 @@ def home(request):
                         "get that dream job!")
 
 
-def login(request):
-    return HttpResponse("This will be the Login Page.")
