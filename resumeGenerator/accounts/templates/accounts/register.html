@@ -25,6 +25,11 @@
         <input type="password" name="password_second" id="password_second" placeholder="Confirm Password" required><br>
         <input type="submit" name="submit" value="Sign Up!">
     </form>
+    {% for message in messages %}
+    <div class="message">
+        {{message}}
+    </div>
+    {% endfor %}
 </div>
 </body>
 </html>
