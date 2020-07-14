@@ -1,0 +1,60 @@
+* {
+  outline: solid red 2px;
+}
+
+body {
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 2fr 1fr 1fr 1fr 1fr;
+}
+
+.block {
+  border: solid black 3px;
+  margin: 10px;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+.personal {
+  grid-row: 1/2;
+  grid-column: 2/3;
+}
+
+.socials {
+  grid-row: 2/3;
+  grid-column: 2/3;
+}
+
+.skills {
+  grid-row: 3/4;
+  grid-column: 2/3;
+}
+
+.projects {
+  grid-row: 4/5;
+  grid-column: 2/3;
+}
+
+.internships {
+  grid-row: 5/6;
+  grid-column: 2/3;
+}
+
+.education {
+  grid-row: 6/7;
+  grid-column: 2/3;
+}
+
+.languages {
+  grid-row: 7/8;
+  grid-column: 2/3;
+}
+
+.certifications {
+  grid-row: 8/9;
+  grid-column: 2/3;
+}
