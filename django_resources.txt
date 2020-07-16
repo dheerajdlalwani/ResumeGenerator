@@ -1,0 +1,58 @@
+1) The most important one:
+
+https://docs.djangoproject.com/en/3.0/
+
+
+
+
+2) I love reading this, instead of video tutorials.
+
+https://djangobook.com/
+
+
+
+
+
+3) This one, in general for web development.
+
+https://selftaughtcoders.com/plan-web-application/
+
+
+
+
+
+4) This helps viewing the SQLite Data easily
+
+https://inloop.github.io/sqlite-viewer/#
+
+
+
+
+
+5) Git Commit messages are a important. Here's a great article about them!
+
+https://www.freecodecamp.org/news/writing-good-commit-messages-a-practical-guide/
+
+
+
+
+
+6) Here's the source code of a really cool project made in Django
+
+https://github.com/Anupam-dagar/Portfolio-Generator
+
+
+
+
+
+7) Y'all wanna deploy your Machine Learning models? This ones for you!
+
+https://www.deploymachinelearning.com/
+
+
+
+
+
+8) Resources to understand the cool new Django ORM way interact with the database
+
+https://www.fullstackpython.com/django-orm.html
