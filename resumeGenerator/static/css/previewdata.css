@@ -3,7 +3,10 @@
     padding: 0;
     margin:0;
     box-sizing: border-box;
+    font-size: 10px !important;
 }
+
+
 
 body
 {
@@ -12,6 +15,7 @@ body
     align-items: center;
     justify-items: center;
     text-align: left;
+    font-size: 10px !important;
 }
 
 .container
@@ -19,8 +23,8 @@ body
     display: grid;
     grid-template-columns: 1fr 1fr ;
     border: solid black 4px;
-    padding: 20px;
-    margin: 20px;
+    padding: 10px;
+    margin: 10px;
     /*height: 90vh !important;*/
     width: 90vw !important;
 }
@@ -32,3 +36,18 @@ body
     margin: 10px;
 }
 
+.col1
+{
+    width: 55vw;
+    /*word-break: break-all;*/
+}
+.col2
+{
+    width: auto;
+    /*word-break: break-all;*/
+}
+
+.projbr
+{
+    word-break: break-all;
+}

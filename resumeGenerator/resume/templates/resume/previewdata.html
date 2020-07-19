@@ -11,7 +11,7 @@
 
 
 <div class="container">
-<div class="personal box">
+<div class="personal col1 box">
     <h1>{{obj.first_name}} {{obj.last_name}} </h1>
     <h2> <u> {{obj.current_position}} </u> </h2><br>
     <span><i class="fa fa-envelope"></i> : {{obj.email}} </span> <br>
@@ -23,7 +23,7 @@
 <br>
 {{obj.intro}}<br>
 </div>
-<div class="skills box">
+<div class="skills col2 box">
     <u><h1>Skills</h1></u><br>
 {{obj.skill_1}}<br>
 {{obj.skill_2}}<br>
@@ -33,39 +33,60 @@
 {{obj.skill_6}}<br>
 {{obj.skill_7}}<br>
 </div>
-<div class="projects box">
-    <u><h1>Projects</h1></u><br>
-    <b>{{obj.project_1_name}}</b><br>
-    {{obj.project_1_description}}<br>
-    <span><i class="fa fa-github"></i> : <a href="{{obj.project_1_github}}">{{obj.project_1_github}}</a> </span>
-    <br><br>
-    <b>{{obj.project_2_name}}</b><br>
-    {{obj.project_2_description}}<br>
-    <span><i class="fa fa-github"></i> : <a href="{{obj.project_2_github}}">{{obj.project_2_github}}</a> </span>
-    <br><br>
-    <b>{{obj.project_3_name}}</b><br>
-    {{obj.project_3_description}}<br>
-    <span><i class="fa fa-github"></i> : <a href="{{obj.project_3_github}}">{{obj.project_3_github}}</a> </span>
-    <br><br>
-    <b>{{obj.project_4_name}}</b><br>
-    {{obj.project_4_description}}<br>
-    <span><i class="fa fa-github"></i> : <a href="{{obj.project_4_github}}">{{obj.project_4_github}}</a> </span>
-    <br><br>
-</div>
 
-<div class="internships box">
-    <u><h1>Internships</h1></u><br>
-{{obj.internship_1_title}}<br>
-{{obj.internship_1_description}}<br>
-<hr>
-{{obj.internship_2_title}}<br>
-{{obj.internship_2_description}}<br>
-<hr>
-{{obj.internship_3_title}}<br>
-{{obj.internship_3_description}}<br>
+{% if obj.project_1_name != "NA" or obj.project_2_name != "NA" or obj.project_3_name != "NA" %}
+<div class="projects col1 projbr box">
+    <u><h1>Projects</h1></u><br>
+    {% if obj.project_1_name != "NA" %}
+        <b>{{obj.project_1_name}}</b><br>
+        {{obj.project_1_description}}<br>
+        <span><i class="fa fa-github"></i> : <a href="{{obj.project_1_github}}">{{obj.project_1_github}}</a> </span>
+        <br><br>
+    {% endif %}
+    {% if obj.project_2_name != "NA" %}
+        <b>{{obj.project_2_name}}</b><br>
+        {{obj.project_2_description}}<br>
+        <span><i class="fa fa-github"></i> : <a href="{{obj.project_2_github}}">{{obj.project_2_github}}</a> </span>
+        <br><br>
+    {% endif %}
+    {% if obj.project_3_name != "NA" %}
+        <b>{{obj.project_3_name}}</b><br>
+        {{obj.project_3_description}}<br>
+        <span><i class="fa fa-github"></i> : <a href="{{obj.project_3_github}}">{{obj.project_3_github}}</a> </span>
+        <br><br>
+    {% endif %}
+    {% if obj.project_4_name != "NA" %}
+        <b>{{obj.project_4_name}}</b><br>
+        {{obj.project_4_description}}<br>
+        <span><i class="fa fa-github"></i> : <a href="{{obj.project_4_github}}">{{obj.project_4_github}}</a> </span>
+        <br><br>
+    {% endif %}
 </div>
+{% endif %}
+
+{% if obj.internship_1_title != "NA" or obj.internship_2_title != "NA" or obj.internship_3_title != "NA"  %}
+<div class="internships col2 box">
+    <u><h1>Internships</h1></u><br>
+        {% if obj.internship_1_title != "NA" %}
+            <h2>{{obj.internship_1_title}}</h2>
+            {{obj.internship_1_description}}<br>
+            <br>
+        {% endif %}
+        {% if obj.internship_2_title != "NA" %}
+            <h2>{{obj.internship_2_title}}</h2>
+            {{obj.internship_2_description}}<br>
+            <br>
+        {% endif %}
+        {% if obj.internship_3_title != "NA" %}
+            <h2>{{obj.internship_3_title}}</h2>
+            {{obj.internship_3_description}}<br>
+            <br>
+        {% endif %}
+</div>
+{% endif %}
+
 {% if obj.education_1_title != "NA" or obj.education_2_title != "NA"  %}
-    <div class="education box">
+    <div class="education col1 box">
         <u><h1>Education</h1></u><br>
         {% if obj.education_1_title != "NA" %}
             <h2>{{obj.education_1_title}}</h2>
@@ -80,7 +101,7 @@
 {% endif %}
 
 {% if obj.language_1 != "NA" or obj.language_2 != "NA" or obj.language_3 != "NA" or obj.language_4 != "NA" or obj.language_5 != "NA" %}
-    <div class="languages box">
+    <div class="languages col2 box">
         <u><h1>Languages</h1></u><br>
         {% if obj.language_1 != "NA" %}
         {{obj.language_1}}<br>
@@ -102,7 +123,7 @@
 
 {% if obj.certification_1 != "NA" or obj.certification_2 != "NA" or obj.certification_3 != "NA" or obj.certification_4 != "NA" %}
 
-    <div class="certifications box">
+    <div class="certifications col1 box">
         <u><h1>Certifications</h1></u><br>
         {{obj.certification_1}}<br>
         {{obj.certification_2}}<br>
