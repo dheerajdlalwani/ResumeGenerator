@@ -4,6 +4,7 @@ from django.contrib.auth.decorators import login_required
 from . models import UserDetails
 from django.contrib.auth.models import User
 from django.contrib import messages
+
 # Create your views here.
 
 
@@ -115,9 +116,14 @@ def user_details(request):
             certification_4=certification_4)
         userdata.save()
         messages.info(request, 'Data Saved in database successfully!')
-
-
-
     return render(request, 'resume/userdetails.html')
+
+
+@login_required(login_url='login')
+def preview_data(request):
+    user_id = request.user.id
+    user = User.objects.get(id=user_id)
+    obj = UserDetails.objects.get(user=user)
+    return render(request, 'resume/previewdata.html', {'obj': obj})
 
 

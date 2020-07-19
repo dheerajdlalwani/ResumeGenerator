@@ -13,6 +13,8 @@
     {% if user.is_authenticated %}
     Welcome, {{user.first_name}}
     <a href="accounts/logout">Logout</a>
+    <a href="resume/userdetails">Fill Data</a>
+    <a href="resume/previewdata">View Data</a>
     {% else %}
     <a href="accounts/login">Login</a>
     <a href="accounts/signup">Register</a>

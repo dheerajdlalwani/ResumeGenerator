@@ -56,6 +56,9 @@ class UserDetails(models.Model):
     certification_3 = models.CharField(max_length=200)
     certification_4 = models.CharField(max_length=200)
 
+    def __str__(self):
+        return self.first_name
+
 
 
 
