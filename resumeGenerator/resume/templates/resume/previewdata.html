@@ -3,48 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <title>Preview Data</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static '/css/previewdata.css' %}">
 </head>
 <body>
 
-<hr>
-<hr>
-{{obj.first_name}}<br>
-{{obj.last_name}}<br>
-{{obj.email}}<br>
-{{obj.current_position}}<br>
-{{obj.linkedin}}<br>
-{{obj.github}}<br>
-{{obj.twitter}}<br>
-{{obj.contact}}<br>
+
+<div class="container">
+<div class="personal box">
+    <h1>{{obj.first_name}} {{obj.last_name}} </h1>
+    <h2> <u> {{obj.current_position}} </u> </h2><br>
+    <span><i class="fa fa-envelope"></i> : {{obj.email}} </span> <br>
+    <span> <i class="fa fa-github"></i> : <a href="{{obj.github}}">{{obj.github}}</a> </span> <br>
+    <span> <i class="fa fa-linkedin"></i> : <a href="{{obj.linkedin}}">{{obj.linkedin}}</a> </span> <br>
+    <span> <i class="fa fa-twitter"></i> : <a href="{{obj.twitter}}">{{obj.twitter}}</a> </span> <br>
+    <span> <i class="fa fa-mobile"></i> : {{obj.contact}} </span> <br>
+
+<br>
 {{obj.intro}}<br>
-<hr>
-<hr>
+</div>
+<div class="skills box">
+    <u><h1>Skills</h1></u><br>
 {{obj.skill_1}}<br>
 {{obj.skill_2}}<br>
 {{obj.skill_3}}<br>
 {{obj.skill_4}}<br>
 {{obj.skill_5}}<br>
 {{obj.skill_6}}<br>
-{{obj.skill_7}}
-<hr>
-<hr>
-{{obj.project_1_name}}<br>
-{{obj.project_1_description}}<br>
-{{obj.project_1_github}}<br>
-<hr>
-{{obj.project_2_name}}<br>
-{{obj.project_2_description}}<br>
-{{obj.project_2_github}}<br>
-<hr>
-{{obj.project_3_name}}<br>
-{{obj.project_3_description}}<br>
-{{obj.project_3_github}}<br>
-<hr>
-{{obj.project_4_name}}<br>
-{{obj.project_4_description}}<br>
-{{obj.project_4_github}}<br>
-<hr>
-<hr>
+{{obj.skill_7}}<br>
+</div>
+<div class="projects box">
+    <u><h1>Projects</h1></u><br>
+    <b>{{obj.project_1_name}}</b><br>
+    {{obj.project_1_description}}<br>
+    <span><i class="fa fa-github"></i> : <a href="{{obj.project_1_github}}">{{obj.project_1_github}}</a> </span>
+    <br><br>
+    <b>{{obj.project_2_name}}</b><br>
+    {{obj.project_2_description}}<br>
+    <span><i class="fa fa-github"></i> : <a href="{{obj.project_2_github}}">{{obj.project_2_github}}</a> </span>
+    <br><br>
+    <b>{{obj.project_3_name}}</b><br>
+    {{obj.project_3_description}}<br>
+    <span><i class="fa fa-github"></i> : <a href="{{obj.project_3_github}}">{{obj.project_3_github}}</a> </span>
+    <br><br>
+    <b>{{obj.project_4_name}}</b><br>
+    {{obj.project_4_description}}<br>
+    <span><i class="fa fa-github"></i> : <a href="{{obj.project_4_github}}">{{obj.project_4_github}}</a> </span>
+    <br><br>
+</div>
+
+<div class="internships box">
+    <u><h1>Internships</h1></u><br>
 {{obj.internship_1_title}}<br>
 {{obj.internship_1_description}}<br>
 <hr>
@@ -53,25 +63,53 @@
 <hr>
 {{obj.internship_3_title}}<br>
 {{obj.internship_3_description}}<br>
-<hr>
-<hr>
-{{obj.education_1_title}}<br>
-{{obj.education_1_description}}<br>
-<hr>
-{{obj.education_2_title}}<br>
-{{obj.education_2_description}}<br>
-<hr>
-<hr>
-{{obj.language_1}}<br>
-{{obj.language_2}}<br>
-{{obj.language_3}}<br>
-{{obj.language_4}}<br>
-{{obj.language_5}}<br>
-<hr>
-<hr>
-{{obj.certification_1}}<br>
-{{obj.certification_2}}<br>
-{{obj.certification_3}}<br>
-{{obj.certification_4}}<br>
+</div>
+{% if obj.education_1_title != "NA" or obj.education_2_title != "NA"  %}
+    <div class="education box">
+        <u><h1>Education</h1></u><br>
+        {% if obj.education_1_title != "NA" %}
+            <h2>{{obj.education_1_title}}</h2>
+            {{obj.education_1_description}}<br>
+        {% endif %}
+        <br>
+        {% if obj.education_2_title != "NA" %}
+            <h2>{{obj.education_2_title}}</h2>
+            {{obj.education_2_description}}<br>
+        {% endif %}
+    </div>
+{% endif %}
+
+{% if obj.language_1 != "NA" or obj.language_2 != "NA" or obj.language_3 != "NA" or obj.language_4 != "NA" or obj.language_5 != "NA" %}
+    <div class="languages box">
+        <u><h1>Languages</h1></u><br>
+        {% if obj.language_1 != "NA" %}
+        {{obj.language_1}}<br>
+        {% endif %}
+        {% if obj.language_2 != "NA" %}
+        {{obj.language_2}}<br>
+        {% endif %}
+        {% if obj.language_3 != "NA" %}
+        {{obj.language_3}}<br>
+        {% endif %}
+        {% if obj.language_4 != "NA" %}
+        {{obj.language_4}}<br>
+        {% endif %}
+        {% if obj.language_5 != "NA" %}
+        {{obj.language_5}}<br>
+        {% endif %}
+    </div>
+{% endif %}
+
+{% if obj.certification_1 != "NA" or obj.certification_2 != "NA" or obj.certification_3 != "NA" or obj.certification_4 != "NA" %}
+
+    <div class="certifications box">
+        <u><h1>Certifications</h1></u><br>
+        {{obj.certification_1}}<br>
+        {{obj.certification_2}}<br>
+        {{obj.certification_3}}<br>
+        {{obj.certification_4}}<br>
+    </div>
+{% endif %}
+</div>
 </body>
 </html>
