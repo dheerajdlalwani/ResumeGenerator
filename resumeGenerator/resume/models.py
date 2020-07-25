@@ -17,6 +17,12 @@ class UserDetails(models.Model):
     twitter = models.CharField(max_length=254)
     contact = models.CharField(max_length=254)
     intro = models.TextField()
+    education_current_title = models.CharField(max_length=100)
+    education_current_description = models.TextField()
+    education_current_marks = models.CharField(max_length=100)
+    education_previous_title = models.CharField(max_length=100)
+    education_previous_description = models.TextField()
+    education_previous_marks = models.CharField(max_length=100)
     skill_1 = models.CharField(max_length=25)
     skill_2 = models.CharField(max_length=25)
     skill_3 = models.CharField(max_length=25)
@@ -38,30 +44,19 @@ class UserDetails(models.Model):
     project_4_github = models.CharField(max_length=254)
     internship_1_title = models.CharField(max_length=200)
     internship_1_description = models.TextField()
+    internship_1_duration = models.CharField(max_length=200)
     internship_2_title = models.CharField(max_length=200)
     internship_2_description = models.TextField()
+    internship_2_duration = models.CharField(max_length=200)
     internship_3_title = models.CharField(max_length=200)
     internship_3_description = models.TextField()
-    education_1_title = models.CharField(max_length=100)
-    education_1_description = models.TextField()
-    education_2_title = models.CharField(max_length=100)
-    education_2_description = models.TextField()
-    language_1 = models.CharField(max_length=50)
-    language_2 = models.CharField(max_length=50)
-    language_3 = models.CharField(max_length=50)
-    language_4 = models.CharField(max_length=50)
-    language_5 = models.CharField(max_length=50)
+    internship_3_duration = models.CharField(max_length=200)
+    community = models.TextField()
     certification_1 = models.CharField(max_length=200)
     certification_2 = models.CharField(max_length=200)
     certification_3 = models.CharField(max_length=200)
     certification_4 = models.CharField(max_length=200)
+    hobbies = models.TextField()
 
     def __str__(self):
         return self.first_name
-
-
-
-
-
-    
-

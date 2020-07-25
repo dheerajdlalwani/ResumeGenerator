@@ -26,7 +26,7 @@ body
     padding: 10px;
     margin: 10px;
     /*height: 90vh !important;*/
-    width: 90vw !important;
+    width: 95vw !important;
 }
 
 .box
@@ -38,11 +38,13 @@ body
 
 .col1
 {
-    width: 55vw;
+    grid-column: 1/2;
+    width: 60vw;
     /*word-break: break-all;*/
 }
 .col2
 {
+    grid-column: 2/3;
     width: auto;
     /*word-break: break-all;*/
 }
@@ -50,4 +52,9 @@ body
 .projbr
 {
     word-break: break-all;
+}
+
+a
+{
+    color: cornflowerblue;
 }

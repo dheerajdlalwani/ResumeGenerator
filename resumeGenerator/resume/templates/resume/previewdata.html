@@ -34,6 +34,46 @@
 {{obj.skill_7}}<br>
 </div>
 
+
+{% if obj.education_current_title != "NA" or obj.education_previous_title != "NA"  %}
+    <div class="education col1 box">
+        <u><h1>Education</h1></u><br>
+        {% if obj.education_current_title != "NA" %}
+            <h2>{{obj.education_current_title}}</h2>
+            {{obj.education_current_marks}}<br>
+            {{obj.education_current_description}}<br>
+        {% endif %}
+        <br>
+        {% if obj.education_previous_title != "NA" %}
+            <h2>{{obj.education_previous_title}}</h2>
+            {{obj.education_previous_marks}}<br>
+            {{obj.education_previous_description}}<br>
+        {% endif %}
+    </div>
+{% endif %}
+
+{% if obj.certification_1 != "NA" or obj.certification_2 != "NA" or obj.certification_3 != "NA" or obj.certification_4 != "NA" %}
+
+    <div class="certifications col2 box">
+        <u><h1>Certifications</h1></u><br>
+        {% if obj.certification_1 != "NA" %}
+            {{obj.certification_1}}<br>
+        {% endif %}
+        {% if obj.certification_2 != "NA" %}
+            {{obj.certification_2}}<br>
+        {% endif %}
+        {% if obj.certification_3 != "NA" %}
+            {{obj.certification_3}}<br>
+        {% endif %}
+        {% if obj.certification_4 != "NA" %}
+            {{obj.certification_4}}<br>
+        {% endif %}
+    </div>
+{% endif %}
+
+
+
+
 {% if obj.project_1_name != "NA" or obj.project_2_name != "NA" or obj.project_3_name != "NA" %}
 <div class="projects col1 projbr box">
     <u><h1>Projects</h1></u><br>
@@ -64,6 +104,7 @@
 </div>
 {% endif %}
 
+
 {% if obj.internship_1_title != "NA" or obj.internship_2_title != "NA" or obj.internship_3_title != "NA"  %}
 <div class="internships col2 box">
     <u><h1>Internships</h1></u><br>
@@ -85,52 +126,28 @@
 </div>
 {% endif %}
 
-{% if obj.education_1_title != "NA" or obj.education_2_title != "NA"  %}
-    <div class="education col1 box">
-        <u><h1>Education</h1></u><br>
-        {% if obj.education_1_title != "NA" %}
-            <h2>{{obj.education_1_title}}</h2>
-            {{obj.education_1_description}}<br>
-        {% endif %}
-        <br>
-        {% if obj.education_2_title != "NA" %}
-            <h2>{{obj.education_2_title}}</h2>
-            {{obj.education_2_description}}<br>
+
+{% if community != "NA" %}
+    <div class="languages col1 box">
+        <u><h1>Community Work:</h1></u><br>
+        {% if obj.community != "NA" %}
+        {{obj.community}}<br>
         {% endif %}
     </div>
 {% endif %}
 
-{% if obj.language_1 != "NA" or obj.language_2 != "NA" or obj.language_3 != "NA" or obj.language_4 != "NA" or obj.language_5 != "NA" %}
-    <div class="languages col2 box">
-        <u><h1>Languages</h1></u><br>
-        {% if obj.language_1 != "NA" %}
-        {{obj.language_1}}<br>
-        {% endif %}
-        {% if obj.language_2 != "NA" %}
-        {{obj.language_2}}<br>
-        {% endif %}
-        {% if obj.language_3 != "NA" %}
-        {{obj.language_3}}<br>
-        {% endif %}
-        {% if obj.language_4 != "NA" %}
-        {{obj.language_4}}<br>
-        {% endif %}
-        {% if obj.language_5 != "NA" %}
-        {{obj.language_5}}<br>
-        {% endif %}
-    </div>
-{% endif %}
 
-{% if obj.certification_1 != "NA" or obj.certification_2 != "NA" or obj.certification_3 != "NA" or obj.certification_4 != "NA" %}
 
-    <div class="certifications col1 box">
-        <u><h1>Certifications</h1></u><br>
-        {{obj.certification_1}}<br>
-        {{obj.certification_2}}<br>
-        {{obj.certification_3}}<br>
-        {{obj.certification_4}}<br>
+
+
+
+{% if obj.hobbies != NA %}
+    <div class="hobbies col2 box">
+        <u><h1>Hobbies</h1></u><br>
+        {{obj.hobbies}}<br>
     </div>
 {% endif %}
 </div>
 </body>
 </html>
+

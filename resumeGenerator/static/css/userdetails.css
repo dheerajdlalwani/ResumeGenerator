@@ -8,7 +8,7 @@ body {
 .container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 2fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 2fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 
 .block {
@@ -56,5 +56,17 @@ body {
 
 .certifications {
   grid-row: 8/9;
+  grid-column: 2/3;
+}
+
+.hobbies
+{
+  grid-row: 9/10;
+  grid-column: 2/3;
+}
+
+.miscellaneous
+{
+  grid-row: 10/11;
   grid-column: 2/3;
 }
