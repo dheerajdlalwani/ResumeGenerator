@@ -1,177 +1,187 @@
 {% load static %}
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap">
     <link rel="stylesheet" href="{% static '/css/userdetails.css' %}">
     <title>Add data</title>
 </head>
+
 <body>
 
     <form action="userdetails" method="post">
         {% csrf_token %}
-<div class="container">
-        <div class="personal block">
-            <label for="first_name">First Name:</label> <br>
-            <input type="text" id="first_name" name="first_name" placeholder="Dheeraj"> <br> <br>
+        <div class="container">
+            <span id="title">
+                Fill Up the following details!
+            </span>
+            <div class="personal block">
+                <span id="title">Personal Details</span> <br>
+                <label for="first_name">First Name:</label> <br>
+                <input type="text" id="first_name" name="first_name" placeholder="Dheeraj"> <br> <br>
 
-            <label for="last_name">Last Name:</label> <br>
-            <input type="text" id="last_name" name="last_name" placeholder="Lalwani"> <br> <br>
+                <label for="last_name">Last Name:</label> <br>
+                <input type="text" id="last_name" name="last_name" placeholder="Lalwani"> <br> <br>
 
-            <label for="email">Email:</label> <br>
-            <input type="email" id="email" name="email" placeholder="someone@something.com"> <br> <br>
+                <label for="email">Email:</label> <br>
+                <input type="email" id="email" name="email" placeholder="someone@something.com"> <br> <br>
 
-            <label for="date_of_birth">Date Of Birth:</label> <br>
-            <input type="date" id="date_of_birth" name="date_of_birth"> <br> <br>
+                <label for="date_of_birth">Date Of Birth:</label> <br>
+                <input type="date" id="date_of_birth" name="date_of_birth"> <br> <br>
 
-            <label for="current_position">Current Position:</label> <br>
-            <input type="text" id="current_position" name="current_position" placeholder="Student or React Developer at XYZ"> <br> <br>
+                <label for="current_position">Current Position:</label> <br>
+                <input type="text" id="current_position" name="current_position"
+                    placeholder="Student or React Developer at XYZ"> <br> <br>
 
-            <label for="intro">A short introduction to you:</label> <br>
-            <textarea id="intro" name="intro" placeholder="1 line description of you."> </textarea> <br> <br>
+                <label for="intro">A short introduction to you:</label> <br>
+                <textarea id="intro" name="intro" placeholder="1 line description of you."> </textarea> <br> <br>
+            </div>
+
+
+            <div class="education block">
+                <label for="education_current_title">Education (Current) :</label> <br>
+                <input type="text" id="education_current_title" name="education_current_title"> <br> <br>
+                <label for="education_current_description">Description:</label> <br>
+                <textarea id="education_current_description" name="education_current_description"></textarea> <br> <br>
+                <label for="education_current_marks">Score/Percentage/CGPA:</label> <br>
+                <input type="text" id="education_current_marks" name="education_current_marks"> <br> <br>
+
+                <label for="education_previous_title">Education (Previous):</label> <br>
+                <input type="text" id="education_previous_title" name="education_previous_title"> <br> <br>
+                <label for="education_previous_description">Description:</label> <br>
+                <textarea id="education_previous_description" name="education_previous_description"></textarea> <br>
+                <br>
+                <label for="education_previous_marks">Score/Percentage/CGPA:</label> <br>
+                <input type="text" id="education_previous_marks" name="education_previous_marks"> <br> <br>
+            </div>
+
+
+            <div class="socials block">
+                <label for="linkedin">LinkedIn:</label> <br>
+                <input type="text" id="linkedin" name="linkedin" placeholder="URL to your LinkedIn profile"> <br> <br>
+
+                <label for="github">GitHub:</label> <br>
+                <input type="text" id="github" name="github" placeholder="URL to your GitHub profile"> <br> <br>
+
+                <label for="twitter">Twitter:</label> <br>
+                <input type="text" id="twitter" name="twitter" placeholder="URL to your Twitter profile"> <br> <br>
+
+                <label for="contact">Contact:</label> <br>
+                <input type="text" id="contact" name="contact" placeholder="9876543210"> <br> <br>
+            </div>
+
+
+            <div class="skills block">
+                <label for="skill_1">Skill 1:</label> <br>
+                <input type="text" id="skill_1" name="skill_1" placeholder="HTML/CSS"> <br> <br>
+
+                <label for="skill_2">Skill 2:</label> <br>
+                <input type="text" id="skill_2" name="skill_2" placeholder="Python"> <br> <br>
+
+                <label for="skill_3">Skill 3:</label> <br>
+                <input type="text" id="skill_3" name="skill_3" placeholder="GoLang"> <br> <br>
+
+                <label for="skill_4">Skill 4:</label> <br>
+                <input type="text" id="skill_4" name="skill_4" placeholder="Javascript"> <br> <br>
+
+                <label for="skill_5">Skill 5:</label> <br>
+                <input type="text" id="skill_5" name="skill_5" placeholder="PhotoShop/Design"> <br> <br>
+
+                <label for="skill_6">Skill 6:</label> <br>
+                <input type="text" id="skill_6" name="skill_6" placeholder="Java"> <br> <br>
+
+                <label for="skill_7">Skill 7:</label> <br>
+                <input type="text" id="skill_7" name="skill_7" placeholder="Logo Design"> <br> <br>
+            </div>
+
+            <div class="projects block">
+                <label for="project_1_name">Project 1:</label> <br>
+                <input type="text" id="project_1_name" name="project_1_name"> <br> <br>
+                <label for="project_1_description">Description:</label> <br>
+                <textarea id="project_1_description" name="project_1_description"></textarea> <br> <br>
+                <label for="project_1_github">GitHub:</label> <br>
+                <input type="text" id="project_1_github" name="project_1_github"> <br> <br>
+
+                <label for="project_2_name">Project 2:</label> <br>
+                <input type="text" id="project_2_name" name="project_2_name"> <br> <br>
+                <label for="project_2_description">Description:</label> <br>
+                <textarea id="project_2_description" name="project_2_description"></textarea> <br> <br>
+                <label for="project_2_github">GitHub:</label> <br>
+                <input type="text" id="project_2_github" name="project_2_github"> <br> <br>
+
+                <label for="project_3_name">Project 3:</label> <br>
+                <input type="text" id="project_3_name" name="project_3_name"> <br> <br>
+                <label for="project_3_description">Description:</label> <br>
+                <textarea id="project_3_description" name="project_3_description"></textarea> <br> <br>
+                <label for="project_3_github">GitHub:</label> <br>
+                <input type="text" id="project_3_github" name="project_3_github"> <br> <br>
+
+                <label for="project_4_name ">Project 4:</label> <br>
+                <input type="text" id="project_4_name " name="project_4_name"> <br> <br>
+                <label for="project_4_description">Description:</label> <br>
+                <textarea id="project_4_description" name="project_4_description"></textarea> <br> <br>
+                <label for="project_4_github">GitHub:</label> <br>
+                <input type="text" id="project_4_github" name="project_4_github"> <br> <br>
+            </div>
+
+            <div class="internships block">
+                <label for="internship_1_title">Internship 1:</label> <br>
+                <input type="text" id="internship_1_title" name="internship_1_title"> <br> <br>
+                <label for="internship_1_duration">Duration :</label> <br>
+                <input type="text" id="internship_1_duration" name="internship_1_duration"> <br> <br>
+                <label for="internship_1_description">Description:</label> <br>
+                <textarea id="internship_1_description" name="internship_1_description"></textarea> <br> <br>
+
+                <label for="internship_2_title">Internship 2:</label> <br>
+                <input type="text" id="internship_2_title" name="internship_2_title"> <br> <br>
+                <label for="internship_2_duration">Duration :</label> <br>
+                <input type="text" id="internship_2_duration" name="internship_2_duration"> <br> <br>
+                <label for="internship_2_description">Description:</label> <br>
+                <textarea id="internship_2_description" name="internship_2_description"></textarea> <br> <br>
+
+                <label for="internship_3_title">Internship 3:</label> <br>
+                <input type="text" id="internship_3_title" name="internship_3_title"> <br> <br>
+                <label for="internship_3_duration">Duration :</label> <br>
+                <input type="text" id="internship_3_duration" name="internship_3_duration"> <br> <br>
+                <label for="internship_3_description">Description:</label> <br>
+                <textarea id="internship_3_description" name="internship_3_description"></textarea> <br> <br>
+            </div>
+            `
+
+            <div class="community block">
+                <label for="community">Community Work:</label> <br>
+                <textarea type="text" id="community" name="community"></textarea> <br> <br>
+            </div>
+
+
+            <div class="certifications block">
+                <label for="certification_1">Certification 1:</label> <br>
+                <input type="text" id="certification_1" name="certification_1"> <br> <br>
+
+                <label for="certification_2">Certification 2:</label> <br>
+                <input type="text" id="certification_2" name="certification_2"> <br> <br>
+
+                <label for="certification_3">Certification 3:</label> <br>
+                <input type="text" id="certification_3" name="certification_3"> <br> <br>
+
+                <label for="certification_4">Certification 4:</label> <br>
+                <input type="text" id="certification_4" name="certification_4"> <br> <br>
+            </div>
+
+            <div class="hobbies block">
+                <label for="hobbies">Hobbies</label> <br>
+                <textarea id="hobbies" name="hobbies"></textarea> <br> <br>
+            </div>
+
+            <input type="submit" value="Generate Resume.pdf!">
+
         </div>
-
-
-        <div class="education block">
-            <label for="education_current_title">Education (Current) :</label> <br>
-            <input type="text" id="education_current_title" name="education_current_title"> <br> <br>
-            <label for="education_current_description">Description:</label> <br>
-            <textarea id="education_current_description" name="education_current_description"></textarea> <br> <br>
-            <label for="education_current_marks">Score/Percentage/CGPA:</label> <br>
-            <input type="text" id="education_current_marks" name="education_current_marks"> <br> <br>
-
-            <label for="education_previous_title">Education (Previous):</label> <br>
-            <input type="text" id="education_previous_title" name="education_previous_title"> <br> <br>
-            <label for="education_previous_description">Description:</label> <br>
-            <textarea id="education_previous_description" name="education_previous_description"></textarea> <br> <br>
-            <label for="education_previous_marks">Score/Percentage/CGPA:</label> <br>
-            <input type="text" id="education_previous_marks" name="education_previous_marks"> <br> <br>
-        </div>
-
-
-        <div class="socials block">
-            <label for="linkedin">LinkedIn:</label> <br>
-            <input type="text" id="linkedin" name="linkedin" placeholder="URL to your LinkedIn profile"> <br> <br>
-
-            <label for="github">GitHub:</label> <br>
-            <input type="text" id="github" name="github" placeholder="URL to your GitHub profile"> <br> <br>
-
-            <label for="twitter">Twitter:</label> <br>
-            <input type="text" id="twitter" name="twitter" placeholder="URL to your Twitter profile"> <br> <br>
-
-            <label for="contact">Contact:</label> <br>
-            <input type="text" id="contact" name="contact" placeholder="9876543210"> <br> <br>
-        </div>
-
-
-        <div class="skills block">
-            <label for="skill_1">Skill 1:</label> <br>
-            <input type="text" id="skill_1" name="skill_1" placeholder="HTML/CSS"> <br> <br>
-
-            <label for="skill_2">Skill 2:</label> <br>
-            <input type="text" id="skill_2" name="skill_2" placeholder="Python"> <br> <br>
-
-            <label for="skill_3">Skill 3:</label> <br>
-            <input type="text" id="skill_3" name="skill_3" placeholder="GoLang"> <br> <br>
-
-            <label for="skill_4">Skill 4:</label> <br>
-            <input type="text" id="skill_4" name="skill_4" placeholder="Javascript"> <br> <br>
-
-            <label for="skill_5">Skill 5:</label> <br>
-            <input type="text" id="skill_5" name="skill_5" placeholder="PhotoShop/Design"> <br> <br>
-
-            <label for="skill_6">Skill 6:</label> <br>
-            <input type="text" id="skill_6" name="skill_6" placeholder="Java"> <br> <br>
-
-            <label for="skill_7">Skill 7:</label> <br>
-            <input type="text" id="skill_7" name="skill_7" placeholder="Logo Design"> <br> <br>
-        </div>
-
-        <div class="projects block">
-            <label for="project_1_name">Project 1:</label> <br>
-            <input type="text" id="project_1_name" name="project_1_name"> <br> <br>
-            <label for="project_1_description">Description:</label> <br>
-            <textarea id="project_1_description" name="project_1_description"></textarea> <br> <br>
-            <label for="project_1_github">GitHub:</label> <br>
-            <input type="text" id="project_1_github" name="project_1_github"> <br> <br>
-
-            <label for="project_2_name">Project 2:</label> <br>
-            <input type="text" id="project_2_name" name="project_2_name"> <br> <br>
-            <label for="project_2_description">Description:</label> <br>
-            <textarea id="project_2_description" name="project_2_description"></textarea> <br> <br>
-            <label for="project_2_github">GitHub:</label> <br>
-            <input type="text" id="project_2_github" name="project_2_github"> <br> <br>
-
-            <label for="project_3_name">Project 3:</label> <br>
-            <input type="text" id="project_3_name" name="project_3_name"> <br> <br>
-            <label for="project_3_description">Description:</label> <br>
-            <textarea id="project_3_description" name="project_3_description"></textarea> <br> <br>
-            <label for="project_3_github">GitHub:</label> <br>
-            <input type="text" id="project_3_github" name="project_3_github"> <br> <br>
-
-            <label for="project_4_name ">Project 4:</label> <br>
-            <input type="text" id="project_4_name " name="project_4_name"> <br> <br>
-            <label for="project_4_description">Description:</label> <br>
-            <textarea id="project_4_description" name="project_4_description"></textarea> <br> <br>
-            <label for="project_4_github">GitHub:</label> <br>
-            <input type="text" id="project_4_github" name="project_4_github"> <br> <br>
-        </div>
-
-        <div class="internships block">
-            <label for="internship_1_title">Internship 1:</label> <br>
-            <input type="text" id="internship_1_title" name="internship_1_title"> <br> <br>
-            <label for="internship_1_duration">Duration :</label> <br>
-            <input type="text" id="internship_1_duration" name="internship_1_duration"> <br> <br>
-            <label for="internship_1_description">Description:</label> <br>
-            <textarea id="internship_1_description" name="internship_1_description"></textarea> <br> <br>
-
-            <label for="internship_2_title">Internship 2:</label> <br>
-            <input type="text" id="internship_2_title" name="internship_2_title"> <br> <br>
-            <label for="internship_2_duration">Duration :</label> <br>
-            <input type="text" id="internship_2_duration" name="internship_2_duration"> <br> <br>
-            <label for="internship_2_description">Description:</label> <br>
-            <textarea id="internship_2_description" name="internship_2_description"></textarea> <br> <br>
-
-            <label for="internship_3_title">Internship 3:</label> <br>
-            <input type="text" id="internship_3_title" name="internship_3_title"> <br> <br>
-            <label for="internship_3_duration">Duration :</label> <br>
-            <input type="text" id="internship_3_duration" name="internship_3_duration"> <br> <br>
-            <label for="internship_3_description">Description:</label> <br>
-            <textarea id="internship_3_description" name="internship_3_description"></textarea> <br> <br>
-        </div>
-`
-
-        <div class="community block">
-            <label for="community">Language 1:</label> <br>
-            <textarea type="text" id="community" name="community"></textarea> <br> <br>
-        </div>
-
-
-        <div class="certifications block">
-            <label for="certification_1">Certification 1:</label> <br>
-            <input type="text" id="certification_1" name="certification_1"> <br> <br>
-
-            <label for="certification_2">Certification 2:</label> <br>
-            <input type="text" id="certification_2" name="certification_2"> <br> <br>
-
-            <label for="certification_3">Certification 3:</label> <br>
-            <input type="text" id="certification_3" name="certification_3"> <br> <br>
-
-            <label for="certification_4">Certification 4:</label> <br>
-            <input type="text" id="certification_4" name="certification_4"> <br> <br>
-        </div>
-
-        <div class="hobbies block">
-            <label for="hobbies">Hobbies</label> <br>
-            <textarea id="hobbies" name="hobbies"></textarea> <br> <br>
-        </div>
-
-        <input type="submit" value="Generate Resume.pdf!">
-
-    </div>
 
     </form>
 
 
 
 </body>
+
 </html>

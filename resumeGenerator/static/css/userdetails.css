@@ -3,70 +3,87 @@
 }
 
 body {
+  background-color: #1b262c;
+  font-family: "Montserrat", sans-serif;
 }
 
 .container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 2fr 1fr 1fr 1fr 1fr 1fr 1fr;
-}
-
-.block {
-  border: solid black 3px;
-  margin: 10px;
+  background-color: #0f4c75;
   display: grid;
   justify-items: center;
   align-items: center;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr ;
+  margin: 100px;
+  padding: 50px;
+  
 }
 
-.personal {
-  grid-row: 1/2;
-  grid-column: 2/3;
+.block {
+  margin: 50px;
+  padding: 20px;
+  display: grid;
+  align-items: center;
+  width: 70%;
+  background-color: #3282b8;
+  border-radius: 10px;
+  font-size: 25px;
+  box-shadow:
+  0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+  0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+  0 12.5px 10px rgba(0, 0, 0, 0.06),
+  0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+  0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+  0 100px 80px rgba(0, 0, 0, 0.12);
 }
 
-.socials {
-  grid-row: 2/3;
-  grid-column: 2/3;
-}
+input[type="text"] {
+  width: 70%;
+  height: 30px;
+  box-sizing: border-box;
+  border-radius: 50px;
+  outline: none;
+  border: none;
+  transition: 0.5s;
+  background-color: #bbe1fa;
+  }
+  
+  input[type="email"] {
+  width: 70%;
+  height: 30px;
+  box-sizing: border-box;
+  border-radius: 50px;
+  outline: none;
+  border: none;
+  transition: 0.5s;
+  background-color: #bbe1fa;
+  }
 
-.skills {
-  grid-row: 3/4;
-  grid-column: 2/3;
-}
+  input[type="date"] {
+    width: 40%;
+    height: 30px;
+    box-sizing: border-box;
+    border-radius: 50px;
+    outline: none;
+    border: none;
+    transition: 0.5s;
+    background-color: #bbe1fa;
+    }
 
-.projects {
-  grid-row: 4/5;
-  grid-column: 2/3;
-}
-
-.internships {
-  grid-row: 5/6;
-  grid-column: 2/3;
-}
-
-.education {
-  grid-row: 6/7;
-  grid-column: 2/3;
-}
-
-.languages {
-  grid-row: 7/8;
-  grid-column: 2/3;
-}
-
-.certifications {
-  grid-row: 8/9;
-  grid-column: 2/3;
-}
-
-.hobbies
-{
-  grid-row: 9/10;
-  grid-column: 2/3;
-}
-
-.miscellaneous
-{
-  grid-row: 10/11;
-  grid-column: 2/3;
-}
+    textarea {
+      width: 70%;
+      height: 30px;
+      box-sizing: border-box;
+      border-radius: 50px;
+      outline: none;
+      border: none;
+      transition: 0.5s;
+      background-color: #bbe1fa;
+      }
+      
+      #title
+      {
+        color: white;
+        font-size: 40px;
+        font-weight: 700;
+      }
