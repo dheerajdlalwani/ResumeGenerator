@@ -7,20 +7,36 @@
     <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static '/css/base.css' %}">
     <title>Resume Generator</title>
 </head>
 
 <body>
-    Welcome to Resume Generator! We will help you generate a professional resume, so that you get that dream job!
-    {% if user.is_authenticated %}
-    Welcome, {{user.first_name}}
-    <a href="accounts/logout">Logout</a>
-    <a href="resume/userdetails">Fill Data</a>
-    <a href="resume/previewdata">View Data</a>
-    {% else %}
-    <a href="accounts/login">Login</a>
-    <a href="accounts/signup">Register</a>
-    {% endif %}
+    <div class="container">
+        <div class="message">
+            Welcome to <br> <span id="name"> Resume Generator </span> <br> I will help you generate a professional
+            resume,
+            so that you get that dream job!
+        </div>
+        <div class="user">
+            {% if user.is_authenticated %}
+            Welcome, {{user.first_name}}
+
+            <div class="buttons">
+                <a href="accounts/logout">Logout</a> <br><br>
+                <a href="resume/userdetails">Fill Data</a><br><br>
+                <a href="resume/previewdata">View Data</a><br><br>
+            </div>
+            {% else %}
+            <div class="buttons2">
+                <a href="accounts/login">Login</a><br><br>
+                <a href="accounts/signup">Register</a><br><br>
+            </div>
+            {% endif %}
+        </div>
+    </div>
 </body>
 
 </html>
