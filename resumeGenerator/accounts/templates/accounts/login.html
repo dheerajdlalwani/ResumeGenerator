@@ -1,21 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+{% load static %}
+
 <head>
     <meta charset="UTF-8">
-    <title>Login</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static '/css/login.css' %}">
+    <title>ResumeGen: Login</title>
 </head>
-<body>
-<form action="login" method="POST">
-    {% csrf_token %}
-    <input type="text" name="username" placeholder="username">
-    <input type="password" name="password" placeholder="password">
-    <input type="submit">
 
-</form>
-{% for message in messages %}
+<body>
+    <div class="container">
+        <form action="login" method="POST">
+            {% csrf_token %}
+            <label for="username">Username: </label><br>
+            <input type="text" id="username" name="username"> <br><br>
+            <label for="password">Password: </label><br>
+            <input type="password" id="password" name="password"> <br><br><br>
+            <input type="submit" value="Login!"><br><br>
+        </form>
+    </div>
+    {% for message in messages %}
     <div class="message">
         {{message}}
     </div>
     {% endfor %}
 </body>
+
 </html>
