@@ -7,20 +7,21 @@
 
 body
 {
-	background-color: #bbe1fa;
+	background-color:  #3282b8;
 	font-family: "Montserrat", sans-serif;
     display: grid;
     justify-items: center;
     align-items: center;
     text-align: center;
-    grid-template-columns: 1fr 1fr;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 7fr;
     min-height: 100vh;
 }
 
 .container
 {
 	grid-column: 2/3;
-
+	grid-row: 2/3;
 	padding: 20px;
 	display: grid;
 
@@ -96,4 +97,9 @@ input[type=submit]:hover
 {
 	background: #bbe1fa;
 	color: black;
+}
+
+.head
+{
+	grid-column: 1/3;
 }
