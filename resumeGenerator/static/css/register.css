@@ -7,24 +7,25 @@
 
 body
 {
-	background-color:  #3282b8;
+	background-color:  #1b262c;
 	font-family: "Montserrat", sans-serif;
     display: grid;
     justify-items: center;
     align-items: center;
     text-align: center;
-
     min-height: 100vh;
+	grid-template-rows: 1fr 7fr;
 }
 
 .container
 {
+	grid-row: 2/3;
 	padding: 20px;
 	display: grid;
 	
 	width: 70%;
-	background-color:  #1b262c;
-	color: white;
+	background-color:  #3282b8;
+	color: #1b262c;
 	border-radius: 10px;
 	font-size: 25px;
 	box-shadow:
@@ -46,7 +47,7 @@ body
 
 .col1
 {
-	grid-column: 1/2;	
+	grid-column: 1/2;
 }
 
 
@@ -64,7 +65,7 @@ body
 input[type="text"] 
 {
 	width: 60%;
-	height: 30px;
+	height: 40px;
 	box-sizing: border-box;
 	border-radius: 50px;
 	outline: none;
@@ -78,7 +79,7 @@ input[type="text"]
 input[type="email"] 
 {
 	width: 60%;
-	height: 30px;
+	height: 40px;
 	box-sizing: border-box;
 	border-radius: 50px;
 	outline: none;
@@ -93,7 +94,7 @@ input[type="email"]
 input[type="password"] 
 {
 	width: 60%;
-	height: 30px;
+	height: 40px;
 	box-sizing: border-box;
 	border-radius: 50px;
 	outline: none;
@@ -113,15 +114,37 @@ input[type="submit"]
 	outline: none;
 	border: none;
 	transition: 0.5s;
-	background-color: #3282b8;
-	color: white;
+	background: black;
+	color: #bbe1fa;
 	font-family: "Montserrat", sans-serif;
 	font-size: 25px;
 }	
 
 
-input[type=submit]:hover
+input[type="submit"]:hover
 {
+	background: #bbe1fa;
+	color: black;
+}
+
+input[type="text"]:focus
+{
+	border: solid #1b262c 2px;
+}
+
+input[type="email"]:focus
+{
+	border: solid #1b262c 2px;
+}
+
+input[type="password"]:focus
+{
+	border: solid #1b262c 2px;
+}
+
+input[type="submit"]:focus
+{
+	border: solid #1b262c 2px;
 	background: #bbe1fa;
 	color: black;
 }

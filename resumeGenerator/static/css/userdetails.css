@@ -20,7 +20,7 @@ body
 
 .container 
 {
-  background-color: #0f4c75;
+  /*background-color: #0f4c75;*/
   display: grid;
   justify-items: center;
   align-items: center;
@@ -53,47 +53,81 @@ body
 input[type="text"] 
 {
   width: 70%;
-  height: 30px;
+  height: 40px;
   box-sizing: border-box;
   border-radius: 50px;
   outline: none;
   border: none;
   transition: 0.5s;
   background-color: #bbe1fa;
+  text-align: center;
+  margin-left: 30px;
   }
   
-  input[type="email"] {
+  input[type="email"]
+  {
   width: 70%;
-  height: 30px;
+  height: 40px;
   box-sizing: border-box;
   border-radius: 50px;
   outline: none;
   border: none;
   transition: 0.5s;
   background-color: #bbe1fa;
+    text-align: center;
+    margin-left: 30px;
   }
 
   input[type="date"] {
     width: 40%;
-    height: 30px;
+    height: 40px;
     box-sizing: border-box;
     border-radius: 50px;
     outline: none;
     border: none;
     transition: 0.5s;
     background-color: #bbe1fa;
+        text-align: center;
+
+    margin-left: 30px;
     }
 
     textarea {
-      width: 70%;
-      height: 30px;
+      /*width: 70%;*/
+      /*height: 30px;*/
       box-sizing: border-box;
-      border-radius: 50px;
+      border-radius: 20px;
       outline: none;
       border: none;
       transition: 0.5s;
       background-color: #bbe1fa;
+      text-align: center;
+      padding: 10px;
+      margin-left: 30px;
       }
+
+
+    input[type="submit"]
+{
+	width: 50%;
+	height: 40px;
+	box-sizing: border-box;
+	border-radius: 50px;
+	outline: none;
+	border: none;
+	transition: 0.5s;
+	background-color: #3282b8;
+	color: white;
+	font-family: "Montserrat", sans-serif;
+	font-size: 25px;
+}
+
+
+input[type=submit]:hover
+{
+	background: #bbe1fa;
+	color: black;
+}
       
       #title
       {
